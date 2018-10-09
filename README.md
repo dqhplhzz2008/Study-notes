@@ -3,10 +3,10 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, Machine Learning(including Deep Learning), etc.It will be updated every Sunday.Please note that the content of the document is written in Chinese.
 ## Version
-v18101<br>
-Updated on October 8th, 2018
+v18102<br>
+Updated on October 9th, 2018
 ## Update log
-C++ week 7.
+Computer composition principle Chapter 4(Excluding Chapter one to three).
 
 ## Contents 
 * Java(Java/)[Completed]
@@ -14,7 +14,7 @@ C++ week 7.
 * Data Structure(Data-Structure/)[Basically completed]
 * C++(C-plus-plus/)[Updating...]
 * Web Crawler(Web-Crawler/)[Completed]
-* *Computer composition principle(Will be updated later)*
+* Computer composition principle[Updating...]
 * *Machine Learning(Will be updated later)*
 * *Algorithm Learning Notes(Will be updated in the future)*
 
@@ -30,11 +30,11 @@ At the same time, you can vist [My blog[Chinese]](http://www.yushuai.me)!
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++、机器学习（包含深度学习）等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v18101<br>
-更新于2018年10月8日
+v18102<br>
+更新于2018年10月9日
 
 ## 更新记录
-更新：C++笔记第7周。
+更新：计算机组成原理第4章（不包括第1章至第3章，后续更新）。
 
 ## 内容
 * Java(Java/)【完成】
@@ -42,7 +42,7 @@ v18101<br>
 * Data Structure(Data-Structure/)【基本完成】
 * C++(C-plus-plus/)【更新中...】
 * Web Crawler(Web-Crawler/)【完成】
-* *Computer composition principle(稍后更新)*
+* 计算机组成原理【更新中...】
 * *Machine Learning(稍后更新)*
 * *算法学习笔记（未来更新）*
 
