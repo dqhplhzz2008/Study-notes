@@ -3,10 +3,10 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, Machine Learning(including Deep Learning), etc.It will be updated every Sunday.Please note that the content of the document is written in Chinese.
 ## Version
-v18103<br>
-Updated on October 14th, 2018
+v18104<br>
+Updated on October 21th, 2018
 ## Update log
-C++ Week 8(Week8.pdf).
+C++ Week 9(Week9.pdf).
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
@@ -32,12 +32,12 @@ At the same time, you can vist [My blog[Chinese]](http://www.yushuai.me)!
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++、机器学习（包含深度学习）等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v18103<br>
-更新于2018年10月14日
+v18104<br>
+更新于2018年10月21日
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
-更新：C++语言程序设计第8周课程笔记（Week8.pdf）。
+更新：C++语言程序设计第9周课程笔记（Week9.pdf）。
 
 ## 内容
 * Java(Java/)【完成】
