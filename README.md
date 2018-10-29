@@ -3,10 +3,10 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, Machine Learning(including Deep Learning), etc.It will be updated every Sunday.Please note that the content of the document is written in Chinese.
 ## Version
-v18105
+v18105<br>
 Updated on October 29th, 2018
 ## Update log
-C++ Week 10(Week10.pdf).
+C++ Week 10(Week10.pdf).<br>
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
@@ -34,15 +34,15 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++、机器学习（包含深度学习）等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v18105
-更新于2018年10月29日
+v18105<br>
+更新于2018年10月29日<br>
 版本将同步在GitHub和Gitee上更新。
 
 **本次更新内容的简介：**
-> 第十周 C++11新特性和C++高级主题
-> 第一节 C++新特性（1）
-> 第二节 C++新特性（2）
-> 第三节 强制类型转换
+> 第十周 C++11新特性和C++高级主题<br>
+> 第一节 C++新特性（1）<br>
+> 第二节 C++新特性（2）<br>
+> 第三节 强制类型转换<br>
 > 第四节 异常处理
 
 ## 更新记录
