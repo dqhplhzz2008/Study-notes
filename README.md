@@ -4,7 +4,7 @@ This is my study notes.
 This repository is about Java, Python, C, C++, Machine Learning(including Deep Learning), etc.It will be updated every Sunday.Please note that the content of the document is written in Chinese.
 ## Version
 v18111<br>
-Updated on November 29th, 2018
+Updated on November 4th, 2018
 ## Update log
 Computer Composition Principle(ch1.pdf).<br>
 I will provide this project in GitHub and Gitee.
