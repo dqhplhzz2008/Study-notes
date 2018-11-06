@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Cpluschapter3.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  chapter4.cpp
+  Cpluschapter3.vcxproj -> D:\codestudy\program\cfuxi\cpluswork\Cpluschapter3\Debug\Cplusexercise.exe
+  Cpluschapter3.vcxproj -> D:\codestudy\program\cfuxi\cpluswork\Cpluschapter3\Debug\Cplusexercise.pdb (Partial PDB)
