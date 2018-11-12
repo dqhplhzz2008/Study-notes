@@ -3,10 +3,10 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, Machine Learning(including Deep Learning), etc.It will be updated every Sunday.Please note that the content of the document is written in Chinese.
 ## Version
-v18112<br>
-Updated on November 6th, 2018
+v18113<br>
+Updated on November 12th, 2018
 ## Update log
-C++ Primer Plus Exercise 3~7(/cpp_exercise).<br>
+Computer composition principle Chapter 2(ch2.pdf).<br>
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
@@ -34,17 +34,17 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++、机器学习（包含深度学习）等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v18112<br>
-更新于2018年11月6日<br>
+v18113<br>
+更新于2018年11月12日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
 更新：C++ Primer Plus第3~7章练习题（/cpp_exercise）。<br>
 **本次更新内容的简介：**
-> 第一章 计算机系统概论<br>
-> 第一节 计算机系统简介<br>
-> 第二节 计算机的基本组成<br>
-> 第三节 计算机硬件的主要技术指标<br>
+> 第二章 <br>
+> 第一节 计算机发展史<br>
+> 第二节 计算机的应用<br>
+> 第三节 计算机的的展望<br>
 
 ## 内容
  - [x] Java(Java/)[完成]
