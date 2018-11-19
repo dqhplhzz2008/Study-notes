@@ -11,14 +11,15 @@ I will provide this project in GitHub and Gitee.
 
 ## Contents 
 
+ - [ ] C++(C-plus-plus/)[Updating...]
+ - [ ] Computer composition principle[Updating...]
+ - [ ] *Linux(linux/)[Will be updated later]*
+ - [ ] *Algorithm Learning Notes(algorithm/)[Will be updated later]*
  - [x] Java(Java/)[Completed]
  - [x]  Python(Python/)[Basically completed]
  - [x] Data Structure(Data-Structure/)[Basically completed]
- - [ ] C++(C-plus-plus/)[Updating...]
  - [x]  Web Crawler(Web-Crawler/)[Completed]
- - [ ] Computer composition principle[Updating...]
- - [ ]  *Machine Learning(Will be updated later)*
- - [ ]  *Algorithm Learning Notes(Will be updated in the future)*
+ - [ ]  *Machine Learning(Will be updated in the future)*
 
 ## Contact Me
 You can contact me by *[ultramannexus@vip.qq.com]*
@@ -42,14 +43,16 @@ v18114<br>
 更新：C++ Primer Plus第8~10章练习题（/cpp_exercise）。<br>
 
 ## 内容
+ - [ ] C++(C-plus-plus/)[更新中...] 
+ - [ ] 计算机组成原理学习笔记[更新中...]
+ - [ ] *Linux(linux/)[即将更新]*
+ - [ ]  *算法学习笔记(algorithm/)[即将更新]*
  - [x] Java(Java/)[完成]
  - [x]  Python(Python/)[基本完成]
- - [x] Data Structure(Data-Structure/)[基本完成]
- - [ ] C++(C-plus-plus/)[更新中...]
+ - [x] 数据结构(Data-Structure/)[基本完成]
  - [x]  Web Crawler(Web-Crawler/)[完成]
- - [ ] Computer composition principle[更新中...]
- - [ ]  *Machine Learning(Will be updated later)*
- - [ ]  *Algorithm Learning Notes(Will be updated in the future)*
+ - [ ]  *Machine Learning(将会在未来更新)*
+
 
 ## 联系我
 你可以发邮件联系我，邮件地址为： *ultramannexus@vip.qq.com*。<br>
