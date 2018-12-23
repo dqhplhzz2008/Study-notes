@@ -3,10 +3,10 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, etc. It will be updated every Sunday. Please note that the content of the document is written in Chinese.
 ## Version
-v18121<br>
-Updated on December 2th, 2018
+v18122<br>
+Updated on December 23th, 2018
 ## Update log
-C++ Primer Plus (5th Edition) Chapter 11~14 Program answer (/cpp_exercise).<br>
+C++ Primer Plus (5th Edition) Chapter 15~17 Program answer (/cpp_exercise).<br>
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
@@ -39,7 +39,7 @@ v18121<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
-更新：C++ Primer Plus（第5版）第11~14章编程题答案（/cpp_exercise）。<br>
+更新：C++ Primer Plus（第5版）第15~17章编程题答案（/cpp_exercise）。<br>
 
 ## 内容
  - [ ] 计算机组成原理学习笔记[更新中...]
