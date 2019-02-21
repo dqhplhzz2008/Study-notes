@@ -3,15 +3,18 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, etc. It will be updated every Sunday. Please note that the content of the document is written in Chinese.
 ## Version
-v19011<br>
-Updated on January 12th, 2019
+v19021<br>
+Updated on February 21th, 2019
 ## Update log
-Computer composition principle Chapter 3, 5~10 (/Computer-composition-principle).<br>
+
+ - vbird's Linux Chapter 0~10 (/linux).
+ - Algorith: Dynamic Programming(/Algorithm)
+
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
- - [ ] *Linux(linux/)[Will be updated later]*
- - [ ] *Algorithm Learning Notes(algorithm/)[Will be updated later]*
+ - [ ] *Linux(linux/)[Updating...]*
+ - [ ] *Algorithm Learning Notes(algorithm/)[Updating...]*
  - [x] C++ elementary knowledge(C-plus-plus/)[Completed]
  - [x] Computer composition principle[Completed]
  - [x] Java(Java/)[Completed]
@@ -20,7 +23,7 @@ I will provide this project in GitHub and Gitee.
  - [x] Web Crawler(Web-Crawler/)[Completed]
 
 ## Contact Me
-You can contact me by *[dqhplhzz2008@163.com]*
+You can contact me by *[davidcheungchina@aliyun.com]*
 Or You can follow my Wechat Official Account.
 ![](https://github.com/dqhplhzz2008/dqhplhzz2008.github.io/raw/master/weixingongzhonghao.jpg)  <br>
 At the same time, you can vist [My blog[Chinese]](http://www.yushuai.xyz)!
@@ -33,16 +36,18 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v19011<br>
-更新于2019年1月12日<br>
+v19021<br>
+更新于2019年2月21日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
-更新：计算机组成原理第3、5~10章（/Computer-composition-principle）。<br>
+更新：
+ - 鸟哥的Linux私房菜基础篇第0~10章（/linux）。
+ - 算法之动态规划(/Algorithm)
 
 ## 内容
- - [ ] *Linux(linux/)[即将更新]*
- - [ ] *算法学习笔记(algorithm/)[即将更新]*
+ - [ ] *Linux(linux/)[更新中...]*
+ - [ ] *算法学习笔记(algorithm/)[更新中...]*
  - [ ] 计算机组成原理学习笔记[完成]
  - [x] C++基本知识(C-plus-plus/)[完成] 
  - [x] Java(Java/)[完成]
@@ -52,7 +57,7 @@ v19011<br>
 
 
 ## 联系我
-你可以发邮件联系我，邮件地址为： *dqhplhzz2008@163.com*。<br>
+你可以发邮件联系我，邮件地址为： *davidcheungchina@aliyun.com*。<br>
 你也可以关注我的微信公众号，如下图：
 ![](https://github.com/dqhplhzz2008/dqhplhzz2008.github.io/raw/master/weixingongzhonghao.jpg)  <br>
 同时欢迎你访问[我的博客[简体中文]](http://www.yushuai.xyz)!

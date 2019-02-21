@@ -1,0 +1,936 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dynamicprogramming</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="关于最长公共子序列（lcs）">关于最长公共子序列（LCS）</h2>
+<p>最长公共子序列和最长公共子串是有区别的，之前我一直把它们混淆。</p>
+<ol>
+<li>最长公共子串举例：假设S1={A,D,C,B,E,X,Q}，S2={H,P,D,C,B,E,M,L}<br>
+那么它们的最长公共子串就是{D,C,B,E}。这是我通常理解的东西。<br>
+最长公共子序列。</li>
+<li>最长公共子序列举例：假设S1={A,<strong>B</strong>,C,<strong>A</strong>,<strong>D</strong>,A,<strong>B</strong>}，S2={<strong>B</strong>,<strong>A</strong>,C,<strong>D</strong>,<strong>B</strong>,A}，那么它们的LCS就是{B,A,D,B}。</li>
+</ol>
+<h2 id="求解最长公共子序列">求解最长公共子序列</h2>
+<p>这是一个动态规划问题。如何求解最长公共子序列（以下用LCS代替）呢？我们假设已经知道Z={z1,z2,…zk}是X={x1,x2,…,xm}和Y={y1,y2,…,yn}的LCS，那么可以分以下三种情况讨论（具体每种情况证明不再累述）：</p>
+<ol>
+<li>xm=yn=zk：那么Zk-1是Xm-1和Yn-1的LCS。</li>
+<li>xm≠yn，yn≠zk：我们可以把yn去掉，那么Zk是Xm和Yn-1的LCS。</li>
+<li>xm≠yn，xm≠zk：我们可以把xm去掉，那么Zk是Xm-1和Yn的LCS。</li>
+</ol>
+<p>基于以上情况，我们可以得到LCS递归式。我们假设c[i][j]表示Xi和Yi的LCS长度，那么：</p>
+<ul>
+<li>c[i][j]=0(i=0或j=0)；</li>
+<li>c[i][j]=c[i-1]c[j-1]+1(i,j&gt;0且xi=yi）；</li>
+<li>c[i][j]=max{c[i-1][j],c[i],[j-1]}；（i,j&gt;0且xi≠yi）。</li>
+</ul>
+<p>这样我们就可以得到LCS的长度。如何得到具体内容是什么呢？我们可以借用一个辅助数组b[i][j]，这个数组用来记录c[i][j]的来源，分别有如下情况：</p>
+<ul>
+<li>c[i][j]=c[i-1][j-1]+1，则b[i][j]=1；</li>
+<li>c[i][j]=c[i][j-1]，则b[i][j]=2；</li>
+<li>c[i][j]=c[i-1][j]，则b[i][j]=3。</li>
+</ul>
+<p>这样就可以根据b[m][n]反向追踪LCS，当b[i][j]=1，输出xi；当b[i][j]=2，追踪c[i][j-1]；当b[i][j]=3，追踪c[i-1][j]，直到i=0或j=0停止。</p>
+<h2 id="算法设计">算法设计</h2>
+<p>（1）初始化。初始化c[][]第1行和第1列为0。<br>
+（2）开始操作。具体是将s1[i]分别与s2[j-1]（j=1,2,…,len2）进行比较，若字符相等c[i][j]=左上角数值+1，且b[i][j]=1；若不相等，则c[i][j]等于左侧或者上侧重最大的一个数值，若左侧和上侧相等，则取左侧，且b[i][j]=2或3（当取左侧为2，取上侧为3）。最后的c[][]和b[][]如下所示：<br>
+下表是c[][]：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>D</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table><p>下表是b[][]：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table><p>根据c[][]可以得出，LCS的长度为4（也就是c[][]最后一个值）。然后开始判断内容是什么，这是要根据b[][]来。<br>
+首先，b[7][6]=2，向左找b[7][5]=1，所以向左上角找b[6][4]，得到字母为s1[6]=[B]；<br>
+b[6][4]=3，向上找b[5][4]=1，向左上角找b[4][3]，得到字母s1[4]=[D]；<br>
+b[4][3]=2，向左找b[4][2=1，向左上角找b[3][1]，得到字母s1[3]=[A]；<br>
+b[3][1]=3，向上找b[2][1]=1，向左上角找b[1][0]，得到字母s1[1]=[B].<br>
+由于b[1][0]=0，所以算法停止，返回结果为“BADB”。</p>
+<h2 id="代码演示">代码演示</h2>
+<pre><code>void LCSL()
+{
+	int i, j;
+	for(i=1;i&lt;len1;i++)
+		for (j = 1; j &lt; len2; j++)
+		{
+			if (s1[i = 1] == s2[j - 1])
+			{
+				c[i][j] = c[i - 1][j - 1] + 1;
+				b[i][j] = 1;
+			}
+			else
+			{
+				if (c[i][j - 1] &gt;= c[i - 1][j])
+				{
+					c[i][j] = c[i][j - 1];
+					b[i][j] = 2;
+				}
+				else
+				{
+					c[i][j] = c[i - 1][j];
+					b[i][j] = 3;
+				}
+			}
+		}
+}
+
+void print(int i, int j)
+{
+	if (i == 0 || j == 0)
+		return;
+	if (b[i][j] == 1)
+	{
+		print(i - 1, j - 1);
+		cout &lt;&lt; s1[i - 1];
+	}
+	else if (b[i][j] == 2)
+		print(i, j - 1);
+	else
+		print(i - 1, j);
+}
+</code></pre>
+<h2 id="编辑距离">编辑距离</h2>
+<h3 id="编辑距离和lcs的不同点">编辑距离和LCS的不同点</h3>
+<ol>
+<li>编辑距离的d[][]取值公式如下：<br>
+（一个前提，若xi=yj，则diff=0；否则为1）<br>
+d[i][j]=min{<strong>d[i - 1][j] + 1</strong>, <strong>d[i][j - 1] + 1</strong>,<strong>d[i-1][j-1]+diff</strong>}</li>
+<li>构造最优解：编辑距离是从右下角开始，逆向查找d[i][j]的来源：上面表示需要<strong>删除</strong>，左侧表示需要<strong>插入</strong>；左上角要判断字符是否相等，若相等，不做任何操作，若不相等，执行<strong>替换</strong>。</li>
+<li>两者的时间复杂度都是O(n*m)。</li>
+</ol>
+<h3 id="代码实现">代码实现</h3>
+<pre><code>int min(int a, int b,int c)
+{
+	int temp = (a &lt; b) ? a : b;
+	return (temp &lt; c) ? temp : c;
+}
+
+//编辑距离函数
+int editdistance(char *str1, char *str2)
+{
+	int i, j;
+	int len1 = strlen(str1);
+	int len2 = strlen(str2);
+	for (i = 0; i &lt;= len1; i++)
+	{
+		d[i][0] = i;
+	}
+	for (j = 0; j &lt;= len2; j++)
+	{
+		d[0][j] = j;
+	}
+	for (i = 1; i &lt;= len1; i++)
+	{
+		for (j = 1; j &lt;= len2; j++)
+		{
+			int diff;
+			if (str1[i - 1] == str2[j - 1])
+				diff = 0;
+			else
+				diff = 1;
+			d[i][j] = min(d[i - 1][j] + 1, d[i][j - 1] + 1,d[i-1][j-1]+diff);
+		}
+	}
+	return d[len1][len2];
+}
+</code></pre>
+<h2 id="游艇租赁问题">游艇租赁问题</h2>
+<p>假设在一条河上有n个游艇出租站，游客可以在这些游艇出租站租游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i到j之间的租金为r(i,j)，i&lt;=i&lt;=j&lt;=n。设计一个算法，计算从游艇出租站i到出租站j所需要的租金最少。</p>
+<h3 id="问题分析">问题分析</h3>
+<p>（1）分析最优解的结构特征<br>
+（2）简历最优值的递归式<br>
+m[i][j]=<br>
+0(j=i);<br>
+r[i][j];j=i+1;<br>
+min{m[i][k]+m[k][j],r[i][j],j&gt;i+1。</p>
+<h3 id="算法设计-1">算法设计</h3>
+<p>（1）确定合适的数据结构：采用二维数组r[][]输入数据，二维数组m[][]存放各个子问题的最优值，二维数组s[][]存放各个子问题的最优决策（停靠站点）。<br>
+（2）初始化：m[i][j]=r[i][j]，然后再找有没有比m[i][j]小的值，如果有，则记录该最优值和最优解即可，s[i][j]=0.<br>
+（3）循环阶段：</p>
+<ul>
+<li>按照递归关系式计算3个站点i,i+1,j(j=i+2)的最优值，并将其存入m[i][j]，同时将最优策略存入s[i][j]，i=1,2,…,n-2。</li>
+<li>按照递归关系式计算4个站点i,i+1,i+2,j(j=i+3)的最优值，并将其存入m[i][j]，同时将最优策略存入s[i][j]，i=1,2,…,n-3。</li>
+<li>以此类推，直到求出n个站点的最优值m[1][n]。</li>
+</ul>
+<p>（4）构造最优解。根据s[][]递归构造最优解。s[1][n]是第一个站点到底n个站点）1,2,…,n）的最优解的停靠站点，即停靠了第s[1][n]个站点，我们在递归构造两个子问题(1,2,…,k）和（k,k+1,…,n）的最优解停靠站点，一直递归到只包含一个站点为止。</p>
+<h3 id="代码实现-1">代码实现</h3>
+<pre><code>void rent()
+{
+	int i, j, k, d;
+	for (d = 3; d &lt;= n; d++)
+	{
+		for (i = 1; i &lt;= n - d + 1; i++)
+		{
+			j = i + d - 1;
+			for (k = i + 1; k &lt; j; k++)
+			{
+				int temp;
+				temp = m[i][k] + m[k][j];
+				if (temp &lt; m[i][j])
+				{
+					m[i][j] = temp;
+					s[i][j] = k;
+				}
+			}
+		}
+	}
+}
+
+void print(int i, int j)
+{
+	if (s[i][j] == 0)
+	{
+		cout &lt;&lt; "-- " &lt;&lt; j;
+		return;
+	}
+	print(i, s[i][j]);
+	print(s[i][j], j);
+}
+</code></pre>
+<h3 id="代码实现2：最贵的租金">代码实现2：最贵的租金</h3>
+<p>其实只是把总结的递归式中的j&gt;i+1的时候的min改为了max。所以只是修改了代码中的</p>
+<pre><code>if (temp &lt; m[i][j])
+</code></pre>
+<p>将其改为了</p>
+<pre><code>if (temp &gt; m[i][j])
+</code></pre>
+<h2 id="快速计算——矩阵连乘">快速计算——矩阵连乘</h2>
+<p>最优递归式：<br>
+当i=j时，只有一个矩阵，m[i][j]=0；<br>
+当i&lt;j的时候，m[i][j]=min{m[i][k]+m[k+1][j]+pip(k+1)qj}</p>
+<h3 id="算法设计-2">算法设计</h3>
+<p>（1）确定合适的数据结构。用一维数组p[]记录矩阵的行和列，第i个矩阵的行数存在数组的第i-1位置，列存在第i位置。二维数组m[][]用来存放各个子问题的最优值，二维数组s[][]来存放各个子问题的最优决策（加括号的位置）。<br>
+（2）初始化。m[i][i]=0，s[i][i]=0。<br>
+（3）循环阶段。</p>
+<ul>
+<li>按照递归关系式计算2个矩阵Ai、Ai+1相乘时的最优值，j+i+1，并将其存入m[i][j]；同时将最优策略计入s[i][j]。i=1,2,3,…,n-1。</li>
+<li>按照递归关系式计算3个矩阵相乘Ai、Ai+1、Ai+2,相乘时的最优值，j+i+2，并将其存入m[i][j]，同时将最优策略记入s[i][j]，i=1,2,3,…,n-2。</li>
+<li>以此类推，直到求出n个矩阵相乘的最优值m[1][n]。</li>
+</ul>
+<p>（4）构造最优解<br>
+根据最有决策信息数组s[][]递归构造最优解。s[1][n]表示A1A2…An最优解的加括号位置，我们在递归构造两个子问题的最优解加括号位置，一直低轨道子问题只包含一个矩阵为止。</p>
+<h3 id="举例图解">举例图解</h3>
+
+<table>
+<thead>
+<tr>
+<th>矩阵</th>
+<th>A1</th>
+<th>A2</th>
+<th>A3</th>
+<th>A4</th>
+<th>A5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>规模</td>
+<td>3*5</td>
+<td>5*10</td>
+<td>10*8</td>
+<td>8*2</td>
+<td>2*4</td>
+</tr>
+</tbody>
+</table><p>（1）初始化<br>
+m[i][i]=0,s[i][i]=0<br>
+（2）计算两个矩阵相乘的最优值<br>
+m[][]如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>m[][]</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>390</td>
+<td>290</td>
+<td>314</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>0</td>
+<td>400</td>
+<td>260</td>
+<td>300</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>160</td>
+<td>240</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>64</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table><p>s[][]如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>s[][]</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table><p>（3）构造最优解<br>
+类似于游艇租赁</p>
+<h3 id="代码实现-2">代码实现</h3>
+<pre><code>void matrixchain()
+{
+    int i,j,r,k;
+    memset(m,0,sizeof(m));
+    memset(s,0,sizeof(s));
+    for(r = 2; r &lt;= n; r++)         //不同规模的子问题
+    {
+        for(i = 1; i &lt;= n-r+1; i++)
+        {
+           j = i + r - 1;
+           m[i][j] = m[i+1][j] + p[i-1] * p[i] * p[j];  //决策为k=i的乘法次数
+           s[i][j] = i;                     //子问题的最优策略是i;
+           for(k = i+1; k &lt; j; k++) //对从i到j的所有决策，求最优值，记录最优策略
+            {
+                int t = m[i][k] + m[k+1][j] + p[i-1] * p[k] * p[j];
+                if(t &lt; m[i][j])
+                {
+                    m[i][j] = t;
+                    s[i][j] = k;
+                }
+            }
+        }
+    }
+}
+void print(int i,int j)
+{
+    if( i == j )
+    {
+       cout &lt;&lt;"A[" &lt;&lt; i &lt;&lt; "]";
+       return ;
+    }
+    cout &lt;&lt; "(";
+    print(i,s[i][j]);
+    print(s[i][j]+1,j);
+    cout &lt;&lt; ")";
+}
+</code></pre>
+<h2 id="最优三角剖分">最优三角剖分</h2>
+<h3 id="与矩阵连乘的不同点">与矩阵连乘的不同点</h3>
+<p>不同点就在于递归公式的不同，最优三角剖分的递归公式如下：<br>
+当i=j的时候，m[i][j]=0；<br>
+当i&lt;j的时候，m[i][j]=min{m[i][k]+m[k+1][j]+w(v(i-1)vkvj)}</p>
+<h3 id="图解示例">图解示例</h3>
+<p>我们以一个凸多边形为例，其每条边的权重如下表所示</p>
+
+<table>
+<thead>
+<tr>
+<th>g[][]</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>3</td>
+<td>4</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>10</td>
+<td>13</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>4</td>
+<td>10</td>
+<td>0</td>
+<td>12</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>12</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>0</td>
+</tr>
+</tbody>
+</table><p>（1）初始化：令m[i][i]=0，s[i][i]=0<br>
+（2）计算赋值如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>m[][]</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>8</td>
+<td>22</td>
+<td>40</td>
+<td>54</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>0</td>
+<td>17</td>
+<td>41</td>
+<td>52</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>35</td>
+<td>42</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>20</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>s[][]</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table><p>所以最优权值为m[1][5]=54<br>
+（3）构造最优解。过程与矩阵快速相乘类似，都是根据s[][]对应的位置来分成子问题，所以首先是看到s[1][5]=3，所以分为了v0~ v3 和 v3~v5。</p>
+<ul>
+<li>因为v0~v3中有结点，所以子问题1不为空，输出该弦v0v3；同理，输出v3v5。</li>
+<li>对于子问题1进行递归，读取s[1][3]=2，因为v0~v2有结点，所以输出v0v2……</li>
+<li>最后输出的最优解为v0v3,v3v5,v0v2。</li>
+</ul>
+<h3 id="代码实现-3">代码实现</h3>
+<pre><code>void  Convexpolygontriangulation()
+{
+    for(int i = 1 ;i &lt;= n ; i++)    // 初始化
+    {
+        m[i][i] = 0 ;
+        s[i][i] = 0 ;
+    }
+    for(int d = 2 ;d &lt;= n ; d++)         // 枚举点的个数
+      for(int i = 1 ;i &lt;= n - d + 1 ; i++)  // 枚举起始点
+      {
+          int j = i + d - 1 ;         // 终点
+          m[i][j] = m[i+1][j] + g[i-1][i] + g[i][j] + g[i-1][j] ;
+          s[i][j] = i ;
+          for(int k = i + 1 ;k &lt; j ; k++)     // 枚举中间点
+          {
+              double temp = m[i][k] + m[k+1][j] + g[i-1][k] + g[k][j] + g[i-1][j] ;
+              if(m[i][j] &gt; temp)
+              {
+                  m[i][j] = temp ;   // 更新最优值
+                  s[i][j] = k ;      // 记录中间点
+              }
+          }
+      }
+}
+void print(int i , int j)  // 输出所有的弦
+{
+    if(i == j)  return ;
+    if(s[i][j]&gt;i)
+      cout&lt;&lt;"{v"&lt;&lt;i-1&lt;&lt;"v"&lt;&lt;s[i][j]&lt;&lt;"}"&lt;&lt;endl;
+    if(j&gt;s[i][j]+1)
+      cout&lt;&lt;"{v"&lt;&lt;s[i][j]&lt;&lt;"v"&lt;&lt;j&lt;&lt;"}"&lt;&lt;endl;
+    print(i ,s[i][j]);
+    print(s[i][j]+1 ,j);
+    //cout&lt;&lt;"{ v"&lt;&lt;i-1&lt;&lt;" , v"&lt;&lt;s[i][j]&lt;&lt;" , v"&lt;&lt;j&lt;&lt;" }"&lt;&lt;endl; //输出所有剖分后的三角形
+}
+</code></pre>
+<h2 id="石子合并">石子合并</h2>
+<h3 id="递归公式：">递归公式：</h3>
+<p>设Min[i][j]代表从第i堆石子到第j堆石子合并的最小花费，Min[i][k]代表从第i堆石子到底k堆石子合并的最小花费，Min[k+1][j]代表从第k+1堆石子到第j堆石子合并的最小花费。那么递推式如下：<br>
+Min[i][j]=0,i=j<br>
+Min[i][j]=min{m[i][k]+m[k+1][j]+w(i,j)} i&lt;j<br>
+同理，设Max[i][j]代表从第i堆石子到第j堆石子合并的最大花费，Max[i][k]代表从第i堆石子到底k堆石子合并的最大花费，Max[k+1][j]代表从第k+1堆石子到第j堆石子合并的最大花费。那么递推式如下：<br>
+Max[i][j]=0,i=j<br>
+Max[i][j]=max{m[i][k]+m[k+1][j]+w(i,j)} i&lt;j</p>
+<h3 id="代码实现-4">代码实现</h3>
+<pre><code>void straight(int a[],int n)
+{
+    for(int i=1;i&lt;=n;i++)  // 初始化
+        Min[i][i]=0, Max[i][i]=0;
+    sum[0]=0;
+    for(int i=1;i&lt;=n;i++)
+       sum[i]=sum[i-1]+a[i];
+    for(int v=2; v&lt;=n; v++) // 枚举合并的堆数规模
+    {
+        for(int i=1; i&lt;=n-v+1; i++) //枚举起始点i
+        {
+            int j = i + v-1; //枚举终点j
+            Min[i][j] = INF; //初始化为最大值
+            Max[i][j] = -1; //初始化为-1
+            int tmp = sum[j]-sum[i-1];//记录i...j之间的石子数之和
+            for(int k=i; k&lt;j; k++) {   //枚举中间分隔点
+                Min[i][j] = min(Min[i][j], Min[i][k] + Min[k+1][j] + tmp);
+                Max[i][j] = max(Max[i][j], Max[i][k] + Max[k+1][j] + tmp);
+            }
+        }
+    }
+}
+void Circular(int a[],int n)
+{
+    for(int i=1;i&lt;=n-1;i++)
+        a[n+i]=a[i];
+    n=2*n-1;
+    straight(a, n);
+    n=(n+1)/2;
+    min_Circular=Min[1][n];
+    max_Circular=Max[1][n];
+    for(int i=2;i&lt;=n;i++)
+    {
+        if(Min[i][n+i-1]&lt;min_Circular)
+           min_Circular=Min[i][n+i-1];
+        if(Max[i][n+i-1]&gt;max_Circular)
+           max_Circular=Max[i][n+i-1];
+    }
+}
+</code></pre>
+<p>时间复杂度为O(n<sup>3</sup>)</p>
+<h3 id="改进算法">改进算法</h3>
+<p>最小值可以用四边形不等式来优化。<br>
+复杂度为O(n<sup>2</sup>)</p>
+<pre><code>void get_Min(int n)
+{
+    for(int v=2; v&lt;=n; v++) // 枚举合并的堆数规模
+    {
+        for(int i=1; i&lt;=n-v+1; i++) //枚举起始点i
+        {
+            int j = i + v-1; //枚举终点j
+            int tmp = sum[j]-sum[i-1];//记录i...j之间的石子数之和
+            int i1=s[i][j-1]&gt;i?s[i][j-1]:i;
+            int j1=s[i+1][j]&lt;j?s[i+1][j]:j;
+            Min[i][j]=Min[i][i1]+Min[i1+1][j];
+            s[i][j]=i1;
+            for(int k=i1+1; k&lt;=j1; k++) //枚举中间分隔点
+                if(Min[i][k]+ Min[k+1][j]&lt;Min[i][j])
+                {
+                    Min[i][j]=Min[i][k]+Min[k+1][j];
+                    s[i][j]=k;
+                }
+            Min[i][j]+=tmp;
+        }
+    }
+}
+
+void get_Max(int n)
+{
+    for(int v=2; v&lt;=n; v++) // 枚举合并的堆数规模
+    {
+        for(int i=1; i&lt;=n-v+1; i++) //枚举起始点i
+        {
+            int j = i + v-1; //枚举终点j
+            Max[i][j] = -1; //初始化为-1
+            int tmp = sum[j]-sum[i-1];//记录i...j之间的石子数之和
+            if(Max[i+1][j]&gt;Max[i][j-1])
+               Max[i][j]=Max[i+1][j]+tmp;
+            else
+               Max[i][j]=Max[i][j-1]+tmp;
+        }
+    }
+}
+
+void straight(int a[],int n)
+{
+    for(int i=1;i&lt;=n;i++)  // 初始化
+        Min[i][i]=0, Max[i][i]=0, s[i][i]=0;
+    sum[0]=0;
+    for(int i=1;i&lt;=n;i++)
+       sum[i]=sum[i-1]+a[i];
+    get_Min(n);
+    get_Max(n);
+}
+void Circular(int a[],int n)
+{
+    for(int i=1;i&lt;=n-1;i++)
+        a[n+i]=a[i];
+    n=2*n-1;
+    straight(a, n);
+    n=(n+1)/2;
+    min_Circular=Min[1][n];
+    max_Circular=Max[1][n];
+    for(int i=2;i&lt;=n;i++)
+    {
+        if(Min[i][n+i-1]&lt;min_Circular)
+           min_Circular=Min[i][n+i-1];
+        if(Max[i][n+i-1]&gt;max_Circular)
+           max_Circular=Max[i][n+i-1];
+    }
+}
+</code></pre>
+</div>
+</body>
+
+</html>
