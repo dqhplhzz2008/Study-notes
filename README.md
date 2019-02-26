@@ -3,18 +3,18 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, etc. It will be updated every Sunday. Please note that the content of the document is written in Chinese.
 ## Version
-v19021<br>
-Updated on February 21th, 2019
+v19026<br>
+Updated on February 26th, 2019
 ## Update log
 
- - vbird's Linux Chapter 0~10 (/linux).
- - Algorith: Dynamic Programming(/Algorithm)
+ - Jianzhi Offer day 1 and 2.
 
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
  - [ ] *Linux(linux/)[Updating...]*
  - [ ] *Algorithm Learning Notes(algorithm/)[Updating...]*
+ - [ ] *Jianzhi offer(jianzhioffer/)[Updating...]*
  - [x] C++ elementary knowledge(C-plus-plus/)[Completed]
  - [x] Computer composition principle[Completed]
  - [x] Java(Java/)[Completed]
@@ -37,24 +37,22 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 我的学习笔记将包括但不限于Java、Python、C、C++等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
 v19021<br>
-更新于2019年2月21日<br>
+更新于2019年2月26日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
 更新：
- - 鸟哥的Linux私房菜基础篇第0~10章（/linux）。
- - 算法之动态规划(/Algorithm)
+ - 《剑指offer》习题整理1和2学习笔记
 
 ## 内容
-<<<<<<< HEAD
+
+ - [ ] *剑指Offfer(jianzhioffer/)[更新中...]*
  - [ ] *Linux(linux/)[更新中...]*
  - [ ] *算法学习笔记(algorithm/)[更新中...]*
  - [ ] 计算机组成原理学习笔记[完成]
-=======
  - [ ] *Linux(linux/)[即将更新]*
  - [ ] *算法学习笔记(algorithm/)[即将更新]*
  - [x] 计算机组成原理学习笔记[完成]
->>>>>>> 482c8757d4e4d035746816216ca1fc5231034a19
  - [x] C++基本知识(C-plus-plus/)[完成] 
  - [x] Java(Java/)[完成]
  - [x] Python(Python/)[基本完成]
