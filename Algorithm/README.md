@@ -1,8 +1,10 @@
 ## README
 
+最后更新日期：2019年2月27日
+
 本部分包含以下内容：
  - [x] [动态规划](https://github.com/dqhplhzz2008/Study-notes/blob/master/Algorithm/dynamicprogramming.md)
- - [ ] 回溯法
+ - [x] [回溯法](https://github.com/dqhplhzz2008/Study-notes/blob/master/Algorithm/backtrack.md)
  - [ ] 分支界限法
  - [ ] 线性规划网络流
 
