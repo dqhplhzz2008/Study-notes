@@ -3,11 +3,12 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, etc. It will be updated every Sunday. Please note that the content of the document is written in Chinese.
 ## Version
-v19026<br>
-Updated on February 26th, 2019
+v19031<br>
+Updated on March 3rd, 2019
 ## Update log
 
- - Jianzhi Offer day 1 and 2.
+ - Jianzhi Offer day 0218/0220/0226/0303.
+ - Algorithm(backtrack/branch bound/dynamicprogramming)
 
 I will provide this project in GitHub and Gitee.
 
@@ -36,13 +37,14 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 ## 关于笔记
 我的学习笔记将包括但不限于Java、Python、C、C++等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
 ## 版本
-v19021<br>
-更新于2019年2月26日<br>
+v19031<br>
+更新于2019年3月3日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
 更新：
- - 《剑指offer》习题整理1和2学习笔记
+ - 《剑指offer》习题整理0218/0220/0226/0303
+ - 算法笔记整理（回溯法、分支限界法、动态规划法）
 
 ## 内容
 
