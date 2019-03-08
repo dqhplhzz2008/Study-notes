@@ -42,7 +42,7 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 
 ## 版本
 
-v19032<br>
+v19034<br>
 更新于2019年3月8日<br>
 版本将同步在GitHub和Gitee上更新。
 
