@@ -3,18 +3,17 @@ This is my study notes.
 ## About
 This repository is about Java, Python, C, C++, etc. It will be updated every Sunday. Please note that the content of the document is written in Chinese.
 ## Version
-v19034<br>
-Updated on March 8th, 2019
+v19035<br>
+Updated on March 10th, 2019
 ## Update log
 
- - Jianzhi Offer day 0308.
- - Algorithm: Linear Programming & Network Flow Ⅱ
+ - Jianzhi Offer day 0310.
 
 I will provide this project in GitHub and Gitee.
 
 ## Contents 
  - [ ] *Linux(linux/)[Updating...]*
- - [ ] *Jianzhi offer(jianzhioffer/)[Updating...]*
+ - [x] Jianzhi offer(jianzhioffer/)[Completed]
  - [x] Algorithm Learning Notes(algorithm/)[Completed]
  - [x] C++ elementary knowledge(C-plus-plus/)[Completed]
  - [x] Computer composition principle[Completed]
@@ -38,24 +37,23 @@ If you want to know me, you can also visit [my resume\[English\]](https://gitpag
 
 ## 关于笔记
 
-我的学习笔记将包括但不限于Java、Python、C、C++等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）
+我的学习笔记将包括但不限于Java、Python、C、C++等内容。本笔记预计将会在每周日更新一次。所有的笔记使用简体中文书写。（如想关注更实时的更新，请在下方扫描二维码关注我的微信公众号或访问我的博客。）**从即日起，本学习笔记暂停更新，预计停更时间约6个月。**
 
 ## 版本
 
-v19034<br>
-更新于2019年3月8日<br>
+v19035<br>
+更新于2019年3月10日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新记录
 
 更新：
- - 《剑指offer》习题整理0305
- - 算法：线性规划与网络流Ⅱ
+ - 《剑指offer》习题整理0310
  
 ## 内容
 
- - [ ] *剑指Offfer(jianzhioffer/)[更新中...]*
  - [ ] *Linux(linux/)[更新中...]*
+ - [x] 剑指Offfer(jianzhioffer/)[完成] 
  - [x] 算法学习笔记(algorithm/)[完成]
  - [x] 计算机组成原理学习笔记[完成]
  - [x] C++基本知识(C-plus-plus/)[完成] 
