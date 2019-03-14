@@ -10,7 +10,7 @@ v19035<br>
 
 |Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|算法(#算法)|C++(#C++)|计算机组成原理(#计算机组成原理)|数据结构(#数据结构)|Java(#Java)|Python(#Python)|网络爬虫(#网络爬虫)|剑指offer题解(#剑指offer题解)|Linux(#Linux)|关于我(#关于我)|
+|[算法](https://github.com/dqhplhzz2008/Study-notes#%E7%AE%97%E6%B3%95)|[C++](https://github.com/dqhplhzz2008/Study-notes#c)|计算机组成原理|数据结构|Java|Python|网络爬虫|剑指offer题解|Linux|关于我|
 
 ## 算法
 整理了《趣学算法》的算法题解。本部分内容包含：
