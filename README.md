@@ -10,9 +10,9 @@ v19035<br>
 
 |Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|算法[:pencil:](#算法-pencil)|C++[:couple:](#C++-couple)|计算机组成原理[:computer:](#计算机组成原理-computer)|数据结构[:floppy_disk:](#数据结构-floppy_disk)|Java[:coffee:](#Java-coffee)|Python[:speak_no_evil:](#Python-speak_no_evil)|网络爬虫[:cloud:](#网络爬虫-cloud)|剑指offer题解[:bulb:](#剑指offer题解bulb)|Linux[:hammer:](#Linux-hammer)|关于我[:pencil2:](#关于我-pencil2)|
+|算法(#算法)|C++(#C++)|计算机组成原理(#计算机组成原理)|数据结构(#数据结构)|Java(#Java)|Python(#Python)|网络爬虫(#网络爬虫)|剑指offer题解(#剑指offer题解)|Linux(#Linux)|关于我(#关于我)|
 
-## 算法 :pencil:
+## 算法
 整理了《趣学算法》的算法题解。本部分内容包含：
 
  - [动态规划](https://github.com/dqhplhzz2008/Study-notes/blob/master/Algorithm/dynamicprogramming.md)
@@ -21,7 +21,7 @@ v19035<br>
  - [线性规划网络流（上）](https://github.com/dqhplhzz2008/Study-notes/blob/master/Algorithm/linearprogramming1.md)
   - [线性规划网络流（下）](https://github.com/dqhplhzz2008/Study-notes/blob/master/Algorithm/linearprogramming2.md)
 
-## C++ :couple:
+## C++
 
 - 北京大学慕课学习笔记整理（中国大学MOOC网）
 - [北京大学慕课官方课件](https://github.com/dqhplhzz2008/Study-notes/tree/master/C-plus-plus/Official%20document)
@@ -29,29 +29,29 @@ v19035<br>
 - [北京大学慕课期末编程考试（中国大学MOOC网）](https://github.com/dqhplhzz2008/Study-notes/blob/master/C-plus-plus/finalexamanswer.pdf)
 - 
 
-##  计算机组成原理 :computer:
+##  计算机组成原理
 
 [中国大学MOOC网计算机组成原理学习笔记（哈尔滨工业大学）](https://github.com/dqhplhzz2008/Study-notes/tree/master/Computer-composition-principle)
 
 
-## 数据结构 :floppy_disk:
+## 数据结构
 
 [个人数据结构学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/Data-Structure)
 
-## Java :coffee:
+## Java
 
 [个人Java学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/Java)
 
 
-## Python :speak_no_evil:
+## Python
 
 [个人Python学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/Python)
 
-## 网络爬虫 :cloud:
+## 网络爬虫
 
 [中国大学MOOC网严嵩老师网络爬虫课程笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/Web-Crawler)
 
-## 剑指offer题解 :bulb:
+## 剑指offer题解
 
 本部分包含以下内容：
  - [2月18日整理题目](https://github.com/dqhplhzz2008/Study-notes/blob/master/jianzhioffer/jianzhioffer0218.md)
@@ -65,11 +65,11 @@ v19035<br>
 
 目前题解更新已经更新**64**道题目，总计**66**道题目，不保证每一道题目都会更新。感谢对我的关注和支持~
 
-## Linux :hammer:
+## Linux
 
 [鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
 
-## 关于我 :pencil2:
+## 关于我
 
 你可以发邮件联系我，邮件地址为： *davidcheungchina@aliyun.com*。<br>
 你也可以关注我的微信公众号，如下图：
