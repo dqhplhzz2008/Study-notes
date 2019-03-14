@@ -9,7 +9,7 @@ v19035<br>
 版本将同步在GitHub和Gitee上更新。
 
 |Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|
-|--|--|--|--|--|--|--|--|--|--|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |算法[:pencil:](#算法-pencil)|C++[:couple:](#C++-couple)|计算机组成原理[:computer:](#计算机组成原理-computer)|数据结构[:floppy_disk:](#数据结构-floppy_disk)|Java[:coffee:](#Java-coffee)|Python[:speak_no_evil:](#Python-speak_no_evil)|网络爬虫[:cloud:](#网络爬虫-cloud)|剑指offer题解[:bulb:](#剑指offer题解bulb)|Linux[:hammer:](#Linux-hammer)|关于我[:pencil2:](#关于我-pencil2)|
 
 ## 算法 :pencil:
