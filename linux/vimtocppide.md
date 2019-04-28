@@ -65,7 +65,7 @@ mkdir -p ~/.vim/bundle/minibufexplorer/plugin && wget "http://www.vim.org/script
 ```
 命令解释：在~/.vim/bundle中新建一个目录minibufexplorer，并在其中创建一个plugin，然后下载网址中的内容，-O表示指定下载目录和文件名如后面所示。然后我们打开两个文件，可以看到如图所示上面有了一个标志。
 
-![](assets/minibufexplorer.png)
+![](https://raw.githubusercontent.com/dqhplhzz2008/Study-notes/master/linux/asset/minibufexplorer.png)
 
 在~/.vimrc文件中插入下面一行：
 
