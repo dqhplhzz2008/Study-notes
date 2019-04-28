@@ -4,8 +4,8 @@
 
 ## 版本
 
-v19043<br>
-更新于2019年4月23日<br>
+v19044<br>
+更新于2019年4月28日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新内容
@@ -71,7 +71,8 @@ Leetcode习题8道
 
 ## Linux
 
-[鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
+- [鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
+- [把CentOS7中的vim打造成C++IDE](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/vimtocppide.md)
 
 ## LeetCode
 
