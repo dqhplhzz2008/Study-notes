@@ -4,8 +4,8 @@
 
 ## 版本
 
-v19044<br>
-更新于2019年4月28日<br>
+v19051<br>
+更新于2019年5月5日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新内容
@@ -73,6 +73,7 @@ Leetcode习题8道
 
 - [鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
 - [把CentOS7中的vim打造成C++IDE](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/vimtocppide.md)
+- [使用stat实现ls -l filename的功能](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/lslbystat.md)
 
 ## LeetCode
 
@@ -81,7 +82,7 @@ Leetcode习题8道
 ## 关于我
 
 你可以发邮件联系我，邮件地址为： *davidcheungchina@aliyun.com*。<br>
-你也可以关注我的微信公众号，如下图：
+你也可以关注我的微信公众号，如下图：<br>
 ![](https://github.com/dqhplhzz2008/dqhplhzz2008.github.io/raw/master/weixingongzhonghao.jpg)  <br>
 同时欢迎你访问[我的博客[简体中文]](http://www.yushuai.xyz)!
 如需了解我，也可以访问我的[个人CV](https://gitpages.yushuai.me/cv/index.html)。感谢您的支持~
