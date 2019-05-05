@@ -233,4 +233,6 @@ printf(" %s %s\n",ctime(&(st.st_mtime)),argv[1]);
 
 ![](https://raw.githubusercontent.com/dqhplhzz2008/Study-notes/master/linux/asset/statls2.png)
 
+代码参见[这里](https://github.com/dqhplhzz2008/Study-notes/blob/master/linux/lsl.c)
+
 

@@ -3,14 +3,15 @@
 本文件夹内容为个人学习Linux相关知识的笔记。
 最后更新时间：2019.5.5
 本部分包含以下内容：
- - [x] 鸟哥的Linux私房菜第1~3章知识点整理
- - [x] 鸟哥的Linux私房菜第4~5章知识点整理
- - [x] 鸟哥的Linux私房菜第6章知识点整理
- - [x] 鸟哥的Linux私房菜第7章知识点整理
- - [x] 鸟哥的Linux私房菜第8章知识点整理 
- - [x] 鸟哥的Linux私房菜第9章知识点整理
- - [x] 鸟哥的Linux私房菜第10章知识点整理
+ - 鸟哥的Linux私房菜第1~3章知识点整理
+ - 鸟哥的Linux私房菜第4~5章知识点整理
+ - 鸟哥的Linux私房菜第6章知识点整理
+ - 鸟哥的Linux私房菜第7章知识点整理
+ - 鸟哥的Linux私房菜第8章知识点整理 
+ - 鸟哥的Linux私房菜第9章知识点整理
+ - 鸟哥的Linux私房菜第10章知识点整理
  - [把CentOS7中的vim打造成C++IDE](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/vimtocppide.md)
+ - [Linux基本操作第4天课程笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/fundamentalday4.md)
  - [使用stat实现ls -l filename的功能](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/lslbystat.md)
 
 

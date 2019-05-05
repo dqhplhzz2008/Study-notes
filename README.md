@@ -10,7 +10,8 @@ v19051<br>
 
 ## 更新内容
 
-Leetcode习题8道
+- Linux学习笔记第四天
+- 使用stat实现`ls -l filename`功能
 
 |Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|
 |--|--|--|--|--|--|--|--|--|--|
@@ -73,6 +74,7 @@ Leetcode习题8道
 
 - [鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
 - [把CentOS7中的vim打造成C++IDE](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/vimtocppide.md)
+ - [Linux基本操作第4天课程笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/fundamentalday4.md)
 - [使用stat实现ls -l filename的功能](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/lslbystat.md)
 
 ## LeetCode
