@@ -4,14 +4,14 @@
 
 ## 版本
 
-v19051<br>
-更新于2019年5月5日<br>
+v19061<br>
+更新于2019年6月12日<br>
 版本将同步在GitHub和Gitee上更新。
 
 ## 更新内容
 
-- Linux学习笔记第四天
-- 使用stat实现`ls -l filename`功能
+- Linux学习笔记第6/7/8天以及第7天习题。
+- 更新Leetcode习题多道。
 
 |Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|
 |--|--|--|--|--|--|--|--|--|--|
@@ -74,12 +74,19 @@ v19051<br>
 
 - [鸟哥的Linux私房菜部分内容学习笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux)
 - [把CentOS7中的vim打造成C++IDE](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/vimtocppide.md)
- - [Linux基本操作第4天课程笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/fundamentalday4.md)
+- [Linux基本操作第4天课程笔记](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/fundamentalday4.md)
 - [使用stat实现ls -l filename的功能](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/lslbystat.md)
+- [Linux基础学习笔记第六天：进程（上）](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/Linuxday6-process.md)
+- [Linux基础学习笔记第六天：进程（下）](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/Linuxday6-process-2.md)
+- [Linux基础学习笔记第七天：exec](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/linux-day-7-exec.md)
+- [Linux基础学习笔记第七天练习1：使用管道实现父子进程间通信](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/linux-day-7-exercise1.md)
+- [Linux基础学习笔记第七天练习2：使用管道实现兄弟进程间通信](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/linux-day-7-exercise2.md)
+- [Linux基础学习笔记第七天练习3：统计当前系统中进程由用户运行的进程并输出到文件中](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/linux-day-7-exercise3.md)
+- [Linux基础学习笔记第八天：mmap](https://github.com/dqhplhzz2008/Study-notes/tree/master/linux/linux-day-8-mmap.md)
 
 ## LeetCode
 
-已经更新13个题目。
+已经更新[leetcode]题目解析（190612）。
 
 ## 关于我
 
